@@ -200,4 +200,4 @@ bindsym $mod+e layout toggle split
 
 focus_follows_mouse no
 
-# screen brightness controls
+# screen brightness controls (to do)
