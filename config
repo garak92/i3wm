@@ -8,9 +8,13 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+#
 exec autorandr --change
 exec nitrogen --restore
+
 exec_always --no-startup-id picom --experimental-backends
+# Disable annoying fading effect: on /etc/xdg/picom.conf add no-fading-openclose = true and fading = false
+
 
 set $mod Mod4
 
@@ -30,7 +34,7 @@ exec --no-startup-id xss-lock -l ~/.config/i3/lockscreen.sh
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 gaps inner 5
 gaps outer 5
