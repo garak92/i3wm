@@ -105,7 +105,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Control+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -201,11 +201,14 @@ tray_output primary
 
 new_window 1pixel
 
-default_orientation vertical
+default_orientation horizontal
 for_window [class=".*"] split toggle
 bindsym $mod+shift+q split toggle kill
 bindsym $mod+e layout toggle split
 
 focus_follows_mouse no
+
+#Keyboard layout switching
+bindsym $mod+space exec --no-startup-id i3-keyboard-layout cycle us es
 
 # screen brightness controls (to do)
