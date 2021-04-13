@@ -2,9 +2,7 @@
 # It will not be overwritten, so edit it as you like.
 #
 # Should you change your keyboard layout some time, delete
-# this file and re-run i3-config-wizard(1).
-#
-
+# this file and re-run i3-config-wizard(1).  #
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -197,7 +195,15 @@ bar {
  position top
         status_command i3status
 tray_output primary
+colors {
+#color class       border  back.   text
+focused_workspace  #d28e60 #d49e4b #000000
+active_workspace   #555555 #555555 #ffffff
+inactive_workspace #000000 #000000 #888888
+urgent_workspace   #2f343a #900000 #ffffff
+                                            }
 }
+
 
 new_window 1pixel
 
@@ -214,3 +220,7 @@ bindsym $mod+space exec --no-startup-id i3-keyboard-layout cycle us es
 # screen brightness controls (to do)
 bindsym XF86MonBrightnessUp exec brightnessctl set 10+%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10-%
+
+#Colorscheme
+                        #border #backgr.#text   #indicator
+client.focused          #d28e60 #d49e4b #000000 #2b2b2b
