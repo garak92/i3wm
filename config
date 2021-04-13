@@ -212,3 +212,5 @@ focus_follows_mouse no
 bindsym $mod+space exec --no-startup-id i3-keyboard-layout cycle us es
 
 # screen brightness controls (to do)
+bindsym XF86MonBrightnessUp exec brightnessctl set 10+%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10-%
