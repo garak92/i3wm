@@ -227,3 +227,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10-%
 #Colorscheme
                         #border #backgr.#text   #indicator
 client.focused          #d28e60 #d49e4b #000000 #2b2b2b
+
+#Open gnome terminal in stacked mode
+for_window [class="Galculator"] floating enable border pixel 1
