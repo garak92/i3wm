@@ -100,6 +100,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
+
 #bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -210,10 +211,8 @@ urgent_workspace   #2f343a #900000 #ffffff
 
 new_window 1pixel
 
-default_orientation horizontal
+default_orientation vertical 
 for_window [class=".*"] split toggle
-bindsym $mod+shift+q split toggle kill
-bindsym $mod+e layout toggle split
 
 focus_follows_mouse no
 
