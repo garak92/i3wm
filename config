@@ -7,8 +7,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
-exec --no-startup-id autorandr --change
-exec --no-startup-id nitrogen --restore
+
+#for_window [class=".*"] border pixel 0
+exec --no-startup-id autorandr --change; sleep 1; nitrogen --restore
 
 exec_always --no-startup-id picom --experimental-backends
 # Disable annoying fading effect: on /etc/xdg/picom.conf add no-fading-openclose = true and fading = false
@@ -211,13 +212,16 @@ urgent_workspace   #2f343a #900000 #ffffff
 
 new_window 1pixel
 
-default_orientation vertical 
+default_orientation horizontal 
 for_window [class=".*"] split toggle
 
 focus_follows_mouse no
 
 #Keyboard layout switching
 bindsym $mod+space exec --no-startup-id i3-keyboard-layout cycle us es
+
+#Open nemo
+bindsym $mod+e exec --no-startup-id nemo 
 
 # screen brightness controls (to do)
 bindsym XF86MonBrightnessUp exec brightnessctl set 10+%
@@ -227,5 +231,5 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10-%
                         #border #backgr.#text   #indicator
 client.focused          #d28e60 #d49e4b #000000 #2b2b2b
 
-#Open gnome terminal in stacked mode
+#Open gnome calculator in stacked mode
 for_window [class="Galculator"] floating enable border pixel 1
