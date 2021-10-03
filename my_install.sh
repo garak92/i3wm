@@ -11,4 +11,4 @@
 #Networking (just in case): install dhcpd netctl wpa_supplicant, bring down interface using ip link device wl01 down and create a profile using wifi-menu
 
 
-sudo pacman -S picom imagemagick xss-lock i3lock rofi nitrogen autorandr otf-font-awesome lutris steam libreoffice-fresh galculator nvidia nvidia-prime htop pavucontrol vim bluez blueman brightnessctl
+sudo pacman -S picom imagemagick xss-lock i3lock rofi nitrogen autorandr otf-font-awesome lutris steam libreoffice-fresh galculator nvidia nvidia-prime htop pavucontrol vim bluez blueman brightnessctl adobe-source-han-sans-otc-fonts
