@@ -10,6 +10,8 @@
 
 for_window [class=".*"] border pixel 0
 exec --no-startup-id autorandr --change; sleep 1; nitrogen --restore
+exec --no-startup-id flameshot
+exec --no-startup-id nm-applet
 
 exec_always --no-startup-id picom --experimental-backends
 # Disable annoying fading effect: on /etc/xdg/picom.conf add no-fading-openclose = true and fading = false
@@ -33,7 +35,7 @@ font pango: otf-font-awesome 10
 	# NetworkManager is the most popular way to manage wireless networks on Linux,
 	# and nm-applet is a desktop environment-independent system tray GUI for it.
 
-	#exec --no-startup-id nm-applet
+	exec --no-startup-id nm-applet
 
 	gaps inner 5
 	gaps outer 5
@@ -46,7 +48,7 @@ font pango: otf-font-awesome 10
 	bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 	#Take a fullscreen screenshot
-		bindsym Print exec scrot $HOME/Documents/Pictures/`date +%Y-%m-%d_%H:%M:%S`.png
+		#bindsym Print exec scrot $HOME/Documents/Pictures/`date +%Y-%m-%d_%H:%M:%S`.png
 
 		# Use Mouse+$mod to drag floating windows to their wanted position
 		floating_modifier $mod
@@ -236,3 +238,5 @@ client.focused          #d28e60 #d49e4b #000000 #2b2b2b
 
 #Open gnome calculator in stacked mode
 for_window [class="Galculator"] floating enable border pixel 1
+
+bindsym Print exec flameshot full -p ~/Documents/Pictures/
