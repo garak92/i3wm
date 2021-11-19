@@ -8,6 +8,10 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
 
+# Contrain focused window
+floating_maximum_size 1200 x 1000
+
+# Start some apps
 for_window [class=".*"] border pixel 0
 exec --no-startup-id autorandr --change; sleep 1; nitrogen --restore
 exec --no-startup-id flameshot
@@ -37,8 +41,8 @@ font pango: otf-font-awesome 10
 
 	exec --no-startup-id nm-applet
 
-	gaps inner 5
-	gaps outer 5
+	gaps inner  3 
+	gaps outer -3
 
 	# Use pactl to adjust volume in PulseAudio.
 	set $refresh_i3status killall -SIGUSR1 i3status
@@ -239,4 +243,5 @@ client.focused          #d28e60 #d49e4b #000000 #2b2b2b
 #Open gnome calculator in stacked mode
 for_window [class="Galculator"] floating enable border pixel 1
 
+#Instant screenshot with flameshot
 bindsym Print exec flameshot full -p ~/Documents/Pictures/
