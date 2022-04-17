@@ -245,4 +245,4 @@ for_window [class="Galculator"] floating enable border pixel 1
 #Instant screenshot with flameshot
 bindsym Print exec flameshot full -p ~/Documents/Pictures/
 
-gaps inner 5
+gaps inner 8
