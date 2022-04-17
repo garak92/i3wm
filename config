@@ -96,7 +96,6 @@ font pango: otf-font-awesome 10
 		bindsym $mod+Shift+Right move right
 
 		# default layout
-		workspace_layout tabbed 
 
 		# split in horizontal orientation
 		bindsym $mod+h split h
@@ -245,3 +244,5 @@ for_window [class="Galculator"] floating enable border pixel 1
 
 #Instant screenshot with flameshot
 bindsym Print exec flameshot full -p ~/Documents/Pictures/
+
+gaps inner 5
